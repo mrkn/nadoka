@@ -33,7 +33,6 @@ $NDK_Debug  = false
 unless defined? Process.daemon
   def Process.daemon(nochdir = nil, noclose = nil)
     exit!(0) if fork
-    exit!(0) if fork
     Process.setsid
     exit!(0) if fork
     Dir.chdir('/') unless nochdir
